@@ -1,0 +1,272 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* App Container */
+.app-container {
+    max-width: 375px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #000;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.app-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.back-btn, .favorite-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #fff;
+}
+
+/* Event Image Section */
+.event-image-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.event-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 20px 16px;
+}
+
+.overlay-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.overlay-content p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* Event Details */
+.event-details {
+    padding: 20px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    flex: 1;
+}
+
+.detail-item i {
+    margin-right: 8px;
+    color: #666;
+    width: 16px;
+}
+
+.detail-item span {
+    flex: 1;
+    color: #000;
+}
+
+.detail-item .fa-chevron-right {
+    margin-left: auto;
+    margin-right: 0;
+    color: #ccc;
+}
+
+/* About Section */
+.about-section {
+    padding: 20px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.about-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Map Section */
+.map-section {
+    padding: 20px 16px;
+}
+
+.map-view-btn {
+    background-color: #007AFF;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.map-view-btn::before {
+    content: "🗺️";
+    font-size: 18px;
+}
+
+.map-view-btn:hover {
+    background-color: #0056CC;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+.map-view-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.map-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 120px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Remove the old map placeholder styles since we're using iframe now */
+.map-placeholder {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+    .app-container {
+        max-width: 100%;
+    }
+    
+    .header, .nav-bar {
+        padding: 12px 16px;
+    }
+    
+    .event-details, .about-section, .map-section {
+        padding: 16px;
+    }
+    
+    .details-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (min-width: 376px) {
+    .app-container {
+        border-radius: 20px;
+        margin: 20px auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Interactive States */
+.back-btn:hover, .favorite-btn:hover, .menu-btn:hover {
+    opacity: 0.7;
+}
+
+/* Smooth Transitions */
+* {
+    transition: all 0.2s ease;
+} 

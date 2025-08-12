@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuit Blanche - Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="app-title">Nuit Blanche</h1>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <button class="back-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="nav-title">Events happening now</span>
+            <button class="favorite-btn">
+                <i class="fas fa-heart"></i>
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Event Image -->
+            <section class="event-image-section">
+                <div class="event-image">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Art Installation">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <h3>"And the spaces between us smiled"</h3>
+                            <p>Dr. Syrus Marcus Ware</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Event Details -->
+            <section class="event-details">
+                <div class="details-row">
+                    <div class="detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>15th of October</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Liberty Village</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section">
+                <h3>About the Exhibition</h3>
+                <p>The view of a horizon line. The time it takes to travel between point A and point B. The feeling we have when separated from a loved one. Zoom out for perspective. Take a closer look. Distance - how do we understand it? How do we feel it? How do we reconnect and bridge the gaps?</p>
+            </section>
+
+            <!-- Map Section -->
+            <section class="map-section">
+                <button class="map-view-btn">Map View</button>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2685894408!2d-79.4564!3d43.6532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b33b6e8b3b8b1%3A0x8b3b8b1!2sDufferin%20Mall!5e0!3m2!1sen!2sca!4v1234567890"
+                        width="100%" 
+                        height="120" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
